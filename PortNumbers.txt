@@ -1,0 +1,5 @@
+Catalog  --> 7072
+Discount --> 7071
+Order    --> 7073
+Cargo	 --> 7074
+Basket	 --> 7075
