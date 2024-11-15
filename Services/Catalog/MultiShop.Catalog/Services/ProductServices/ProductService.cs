@@ -3,7 +3,6 @@ using MongoDB.Driver;
 using MultiShop.Catalog.Dtos.ProductDtos;
 using MultiShop.Catalog.Entities;
 using MultiShop.Catalog.Settings;
-using System.Runtime.InteropServices;
 
 namespace MultiShop.Catalog.Services.ProductServices
 {
@@ -11,12 +10,14 @@ namespace MultiShop.Catalog.Services.ProductServices
     {
         private readonly IMongoCollection<Product> _productCollection;
         private readonly IMapper _mapper;
+        private readonly IMongoCollection<Category> _categoryCollection;
 
         public ProductService(IMapper mapper, IDatabaseSettings _databaseSettings)
         {
             var client = new MongoClient(_databaseSettings.ConnectionString);
             var database = client.GetDatabase(_databaseSettings.DatabaseName);
             _productCollection = database.GetCollection<Product>(_databaseSettings.ProductCollectionName);
+            _categoryCollection = database.GetCollection<Category>(_databaseSettings.CategoryCollectionName);
             _mapper = mapper;
         }
 
@@ -43,10 +44,20 @@ namespace MultiShop.Catalog.Services.ProductServices
             return _mapper.Map<GetByIdProductDto>(values);
         }
 
+        public async Task<List<ResultProductsWithCategoryDto>> GetProductsWithCategoryAsync()
+        {
+            var values = await _productCollection.Find(x=>true).ToListAsync();
+            foreach(var item in values)
+            {
+                item.Category = await _categoryCollection.Find<Category>(x=>x.CategoryId == item.CategoryId).FirstAsync();
+            }
+            return _mapper.Map<List<ResultProductsWithCategoryDto>>(values);
+        }
+
         public async Task UpdateProductAsync(UpdateProductDto updateProductDto)
         {
             var values = _mapper.Map<Product>(updateProductDto);
-            await _productCollection.FindOneAndReplaceAsync(x=>x.ProductId == updateProductDto.ProductId, values);
+            await _productCollection.FindOneAndReplaceAsync(x => x.ProductId == updateProductDto.ProductId, values);
         }
     }
 }
