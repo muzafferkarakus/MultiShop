@@ -1,0 +1,29 @@
+﻿@model UpdateAboutDto
+@{
+    ViewData["Title"] = "UpdateAbout";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+<div class="col-md-12">
+    <div class="chart-box">
+        <h4>Kategoriler</h4>
+        <div class="bs-example" data-example-id="bordered-table">
+            <form method="post">
+                <input type="hidden" asp-for="AboutId" />
+                <label>Hakkımda</label>
+                <input type="text" class="form-control" asp-for="Description" />
+                <br />
+                <label>Adres</label>
+                <input type="text" class="form-control" asp-for="Address" />
+                <br />
+                <label>E-Posta</label>
+                <input type="text" class="form-control" asp-for="Email" />
+                <br />
+                <label>Telefon</label>
+                <input type="text" class="form-control" asp-for="Phone" />
+                <br />
+                <button class="btn btn-primary">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
+

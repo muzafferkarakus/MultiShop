@@ -2,10 +2,9 @@
 {
     public class UpdateSpecialOfferDto
     {
-        public int CouponId { get; set; }
-        public string CouponCode { get; set; }
-        public int Rate { get; set; }
-        public bool IsActive { get; set; }
-        public DateTime ValidDate { get; set; }
+        public string SpecialOfferId { get; set; }
+        public string Title { get; set; }
+        public string SubTitle { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

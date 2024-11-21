@@ -1,0 +1,23 @@
+﻿@model UpdateFeatureDto
+@{
+    ViewData["Title"] = "UpdateFeature";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+<div class="col-md-12">
+    <div class="chart-box">
+        <h4>Özellik Ekleme</h4>
+        <div class="bs-example" data-example-id="bordered-table">
+            <form method="post">
+                <input type="hidden" asp-for="FeatureId" />
+                <label>Özellik Adı</label>
+                <input type="text" class="form-control" asp-for="Title" />
+                <br />
+                <label>İkon</label>
+                <input type="text" class="form-control" asp-for="Icon" />
+                <br />
+                <button class="btn btn-primary">Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>
+
