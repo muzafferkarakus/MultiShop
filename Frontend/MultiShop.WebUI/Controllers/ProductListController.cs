@@ -16,11 +16,18 @@ namespace MultiShop.WebUI.Controllers
         public IActionResult Index(string id)
         {
             ViewBag.i = id;
+            ViewBag.v1 = "Ana Sayfa";
+            ViewBag.v2 = "Ürünler";
+            ViewBag.v3 = "Ürün Listesi";
             return View();
         }
         public IActionResult ProductDetails(string id)
         {
             ViewBag.x = id;
+            ViewBag.i = id;
+            ViewBag.v1 = "Ana Sayfa";
+            ViewBag.v2 = "Ürün Listesi";
+            ViewBag.v3 = "Ürün Detayları";
             return View();
         }
         [HttpGet]
