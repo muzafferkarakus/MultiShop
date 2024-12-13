@@ -5,7 +5,7 @@ using MultiShop.Discount.Services;
 
 namespace MultiShop.Discount.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DiscountsController : ControllerBase
@@ -26,6 +26,12 @@ namespace MultiShop.Discount.Controllers
         public async Task<IActionResult> GetDiscountCouponById(int id)
         {
             var values = await _discountService.GetByICouponAsync(id);
+            return Ok(values);
+        }
+        [HttpGet("GetCodeDetailByCodeAsync")]
+        public async Task<IActionResult> GetCodeDetailByCode(string code)
+        {
+            var values = await _discountService.GetCodeDetailByCodeAsync(code);
             return Ok(values);
         }
         [HttpPost]
