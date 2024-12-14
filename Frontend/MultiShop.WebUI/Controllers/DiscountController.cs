@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
+using MultiShop.WebUI.Services.BasketServices;
 using MultiShop.WebUI.Services.DiscountServices;
 
 namespace MultiShop.WebUI.Controllers
@@ -6,17 +8,28 @@ namespace MultiShop.WebUI.Controllers
     public class DiscountController : Controller
     {
         private readonly IDiscountService _discountService;
+        private readonly IBasketService _basketService;
 
-        public DiscountController(IDiscountService discountService)
+        public DiscountController(IDiscountService discountService, IBasketService basketService)
         {
             _discountService = discountService;
+            _basketService = basketService;
+        }
+        [HttpGet]
+        public async Task<PartialViewResult> ConfirmDiscountCoupon()
+        {
+            return PartialView();
         }
         [HttpPost]
-        public IActionResult ConfirmDiscountCoupon(string code)
+        public async Task<IActionResult> ConfirmDiscountCoupon(string code)
         {
-            code = "BONUS20";
-            var values = _discountService.GetDiscountCode(code);
-            return View(values);
+            var values = await _discountService.GetDiscountCouponRate(code);
+            var basketValues = await _basketService.GetBasket();
+            var totalPriceWithTax = basketValues.TotalPrice + basketValues.TotalPrice / 100 * 20;
+            var totalNewPriceWithDiscount = totalPriceWithTax - (totalPriceWithTax / 100 * values);
+            ViewBag.totalNewPriceWithDiscount = totalNewPriceWithDiscount;
+
+            return RedirectToAction("Index", "ShoppingCart", new { code = code, discountRate = values, totalNewPriceWithDiscount = totalNewPriceWithDiscount });
         }
     }
 }
