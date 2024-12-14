@@ -2,7 +2,6 @@
 using MultiShop.DtoLayer.BasketDtos;
 using MultiShop.WebUI.Services.BasketServices;
 using MultiShop.WebUI.Services.CatalogServices.ProductServices;
-using MultiShop.WebUI.Services.DiscountServices;
 
 namespace MultiShop.WebUI.Controllers
 {
