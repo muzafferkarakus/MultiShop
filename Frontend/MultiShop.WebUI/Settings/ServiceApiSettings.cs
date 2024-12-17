@@ -12,6 +12,7 @@
         public ServisApi Basket { get; set; }
         public ServisApi Payment { get; set; }
         public ServisApi Comment { get; set; }
+        public ServisApi Message { get; set; }
     }
     public class ServisApi
     {

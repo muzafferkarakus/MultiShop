@@ -19,9 +19,17 @@ namespace MultiShop.Order.Application.Features.CQRS.Handlers.AddressHandlers
             {
                 AddressId = x.AddressId,
                 City = x.City,
-                Detail = x.Detail,
+                Detail1 = x.Detail1,
                 District = x.District,
-                UserId = x.UserId
+                UserId = x.UserId,
+                Country = x.Country,
+                Name = x.Name,
+                Surname = x.Surname,
+                Email = x.Email,
+                Phone = x.Phone,
+                Description = x.Description,
+                Detail2 = x.Detail2,
+                ZipCode = x.ZipCode
             }).ToList();
         }
     }

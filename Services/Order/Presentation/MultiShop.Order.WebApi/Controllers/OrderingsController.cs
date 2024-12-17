@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.Order.Application.Features.Mediator.Commands;
 using MultiShop.Order.Application.Features.Mediator.Queries.OrderingQueries;
@@ -46,6 +47,12 @@ namespace MultiShop.Order.WebApi.Controllers
         {
             await _mediator.Send(command);
             return Ok("Sipariş Güncellendi");
+        }
+        [HttpGet("GetOrderingByUserId/{id}")]
+        public async Task<IActionResult> GetOrderingByUserId(string id)
+        {
+            var values = await _mediator.Send(new GetOrderingByUserIdQuery(id));
+            return Ok(values);
         }
     }
 }

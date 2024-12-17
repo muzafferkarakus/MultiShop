@@ -3,7 +3,7 @@ using MultiShop.WebUI.Services.BasketServices;
 
 namespace MultiShop.WebUI.ViewComponents.ShoppingCartViewComponents
 {
-    public class _ShoppingCartProductListComponentPartial:ViewComponent
+    public class _ShoppingCartProductListComponentPartial : ViewComponent
     {
         private readonly IBasketService _basketService;
 
