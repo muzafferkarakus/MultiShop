@@ -1,0 +1,29 @@
+﻿@model UpdateOfferDiscountDto
+@{
+    ViewData["Title"] = "UpdateOfferDiscount";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+<div class="col-md-12">
+    <div class="chart-box">
+        <h4>Özel Teklifler</h4>
+        <div class="bs-example" data-example-id="bordered-table">
+            <form method="post">
+                <input type="hidden" asp-for="OfferDiscountId" />
+                <label>Başlık</label>
+                <input type="text" class="form-control" asp-for="Title" />
+                <br />
+                <label>Alt Başlık</label>
+                <input type="text" class="form-control" asp-for="SubTitle" />
+                <br />
+                <label>Görsel</label>
+                <input type="text" class="form-control" asp-for="ImageUrl" />
+                <br />
+                <label>Buton Başlığı</label>
+                <input type="text" class="form-control" asp-for="ButtonTitle" />
+                <br />
+                <button class="btn btn-primary">Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>
+

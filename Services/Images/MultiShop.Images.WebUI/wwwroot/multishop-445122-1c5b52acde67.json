@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "multishop-445122",
+  "private_key_id": "1c5b52acde6775e80ccb53d46c6cd5075d9338c5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDAqAObmPOEIpLG\n/NLlvHpWuKfz1Lced3nlf4rHj+tguBtQu0QVCSHz/Fl0RETztV0TgRe8fV7uGavz\nd5skB60cN0fQvrPAYZDN4Fb/J0SG6+mBtJT5hZdtQ08+MyT2p5giuTaRmTm9ckXS\nUbELKRnf0tBya2Y4A7P8rZncMc6R2Wp68meGarnhO32ux7PXkNVPOBOV7xObesGa\nuiLKKqWDLLCgghuVu9+nCGcHBlDjM32sNZpLWJ/ouXevFTB6El0h9bsFi9WJUXFg\nbv/jjH4mPBwLXDd7U2ZNAohwxc8STpfXBNX94LDzPmEMvOK77hAUc0S92wGIt3S2\neDx3s+UJAgMBAAECggEACHp0YzD3WYOsfi+S5+uUHjQk5wb/0opLPeFvpfHkV8au\nZA6Ds+HJodtDhAl7l9aNzK2QEfpZ9sRANBgZxpuEX6MiqNH1puQcS2UhqvurST1B\nUtUTv8nkZLlzN69oQ2cTe8a3Gy/5MahBYJy5+/3gbsBQLlLh5hnqnjZ1GJLEDpjF\nTpC7/p+MAkv0I5Tlj/s6HILGDoDaaMEvehgTzLJz3z2k5LVzQGCvTwqT7NXmOA5w\n5cBVEbDk1iNgP1hunLEvy2y7msjJuzM4fmaoKbAQTP+YFDz+St65AYKS002KuWGl\n6+SjtgkaAnpZbNRv7z0QybvQ8Tv4NZ4SrKRS6ht94QKBgQD2lOEJfZNZdhQIQOT7\nIDIjyWtUILuAGbuAVEpKwPwloqdvIFlHGefhnJT808qfM2SIekvcafe7oJ8ZEroS\nn/dxdS7xNqkj3jgVh46rcn+bTv9o+YFGjDZURwNXPH8YZ4A91fymtohK8sVILi1d\nQbhlsljhvd8a6PwU+UYWM90HqQKBgQDIA9f/7SqI3+EQtCYDKjlfOwGLRkyD0die\ny0wdmckSbX61eEYJQbpj5aWfqiJQgfW6hHlw1Ubh0M9/grib08Ed+IKSgg+HRkrK\n/9cl/+zxqJGgY6G1k12n1SYNGajTf9h6EMgiQnJeS3Hh/NRa2FSTEVqZ8GF+Y0KW\nc+PSxLrOYQKBgQCn/5ku6SK6Qeu2D9iyjCX9Id8BK2f0CBQqg8M2GTPxxFcFLGoH\nOkw094S+mOGlA9PL9F65Jm2FpRKgd5TU2a4x2+AGsfIdIOrfKEN45gKw4uq7L7r3\nQNJHKzbIecwx6VqDRsbjItvLDIqC+gsoTX1/tDpAWyelYvVUqN0qhV1jOQKBgQC/\nEdzv4RI2+xe3q0B82YNBE88fyyIg8v/qge7OgDBy6CKZHLJa+W0jLSgQ5KgvHFcv\nvIl+Xl9+LMlr1+afBaSACvxBFPnckiu0zL4s0NT67btf6o16NbLMN3RII3EByil0\nQj/Naohyx8OczLfXqLzyWSuhzt5zrELaEw9aMxD5QQKBgQCY5AZxDLrBXWAhIuvQ\nWPxjW0Nba26fzpp7+B+pwLRA0FYAU/FTUtF7J9ZpGaHqT4wQG2LpgpZnl04uelMf\n5jNHTFKmY+Z8eT2I8pHrKEAd9Whxp0OZZKBpYrgcNfuvfXVC4L6XGHSAeyCv9/h/\ngar1x1jOkqujKR8hqisr3Ls6qQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "multishop@multishop-445122.iam.gserviceaccount.com",
+  "client_id": "108180684260207074567",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/multishop%40multishop-445122.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

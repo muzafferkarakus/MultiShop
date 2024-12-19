@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_HeadUILayoutComponentPartial")
+<body>
+    @await Component.InvokeAsync("_TopbarViewComponents")
+
+    @await Component.InvokeAsync("_NavbarViewComponents")
+
+    @await Component.InvokeAsync("_BreadcrumbComponentPartial")
+
+    @RenderBody()
+
+    @await Component.InvokeAsync("_FooterComponentPartial")
+
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    @await Component.InvokeAsync("_ScriptComponentPartial")
+</body>
+
+</html>
