@@ -38,7 +38,7 @@ Mimariler
 ------------------
 •	Onion Architecture
 
-•	N Tiee Architecture
+•	N Tier Architecture
 
 Design Pattern
 -------------------
