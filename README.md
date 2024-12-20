@@ -6,6 +6,8 @@ Proje geliştirilirken Modüler bir yapıya ayrılıp Mümkün olduğunca her mo
 
 Catalog Servisinde Veriler MongoDb de tutulurken Sepet işlemleri için Redis kullanılmıştır. İndirimlerde Orm olarak Dapper kullanılırken Kargo işlemlerinde EntityFramework'e yer verilmiştir. 
 
+Uygulama güvenliğinde Identity Server Json Web Token ile sağlandı.
+
 Kullanılan Teknolojiler
 ------------------------
 •	Asp.Net Core 6.0
@@ -13,6 +15,10 @@ Kullanılan Teknolojiler
 •	Asp.Net Core 6.0 Web Api
 
 •	Identity Server
+
+•	Json Web Token
+
+•	JWT
 
 •	Ocelot Gateway
 
